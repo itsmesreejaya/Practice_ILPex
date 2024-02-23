@@ -10,10 +10,10 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-type propsType = {inputboxname: string; placeholdervalue: string; secureValue:boolean};
+type propsType = {inputboxname: string; placeholdervalue: string; secureValue:boolean; onChangeText:(text: string) => void;};
 
 const InputBox = (props: propsType) => {
-  const {inputboxname, placeholdervalue,secureValue } = props;
+  const {inputboxname, placeholdervalue,secureValue,onChangeText } = props;
 
   return (
     <View style={styles.inputContainer}>
@@ -21,7 +21,11 @@ const InputBox = (props: propsType) => {
       <TextInput
         style={styles.inputBox}
         placeholder={placeholdervalue}
-        secureTextEntry ={secureValue}></TextInput>
+        secureTextEntry ={secureValue}
+        onChangeText={onChangeText}
+        >
+
+        </TextInput>
     </View>
   );
 };

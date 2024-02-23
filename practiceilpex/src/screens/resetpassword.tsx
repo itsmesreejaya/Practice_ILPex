@@ -6,7 +6,14 @@ import {Link} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/native';
 
 const ResetPassword = () => {
+
+
   const navigation = useNavigation();
+  const [newPassword,setNewPassword] = useState('');
+  const [confirmPassword,setConfirmPassword] = useState('');
+
+
+
   const onPress = () => {
     navigation.navigate('login', {});
   };
@@ -18,11 +25,13 @@ const ResetPassword = () => {
         secureValue={true}
         inputboxname="Password"
         placeholdervalue="Enter new Password"
+        onChangeText={(text) => setNewPassword(text)}
       />
       <InputBox
         secureValue={true}
         inputboxname="Confirm Password"
         placeholdervalue="Confirm new Password"
+        onChangeText={(text) => setConfirmPassword(text)}
       />
       <Button onPress={onPress} buttontext="Submit" />
     </View>
