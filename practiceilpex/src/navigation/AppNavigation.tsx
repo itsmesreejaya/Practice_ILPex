@@ -3,13 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import ForgotPassword from '../screens/forgotPassword';
-import Login from '../screens/login';
-import ResetPassword from '../screens/resetpassword';
-import Splash from '../screens/splash';
 import HomeScreen from '../screens/HomeScreen';
-// import TraineeScreen from '../screens/TraineeScreen';
-// import AssessmentScreen from '../screens/Assessment';
+import TraineeScreen from '../screens/TraineeScreen';
+import AssessmentScreen from '../screens/Assessment';
 
 const BottomNav = createBottomTabNavigator();
 const StackNav = createNativeStackNavigator();
@@ -51,7 +47,7 @@ const BottomStackNavigation = () => {
           ),
         }}
       />
-      {/* <BottomNav.Screen
+      <BottomNav.Screen
         name='Trainees'
         component={TraineeScreen}
         options={{
@@ -61,8 +57,8 @@ const BottomStackNavigation = () => {
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}
-      /> */}
-      {/* <BottomNav.Screen
+      />
+      <BottomNav.Screen
         name='Assessments'
         component={AssessmentScreen}
         options={{
@@ -72,17 +68,17 @@ const BottomStackNavigation = () => {
             <MaterialCommunityIcons name="note-plus" color={color} size={26} />
           ),
         }}
-      /> */}
+      />
     </BottomNav.Navigator>
   );
 };
 
 const styles = StyleSheet.create({
   label: {
-    fontSize: 16, // Optional: Adjust the font size of the tab labels
+    fontSize: 16, 
   },
   tabBar: {
-    height: 70, // Adjust the height as needed
+    height: 70, 
   },
   
 });

@@ -20,7 +20,7 @@ const TraineeCardComponent = (props : PropsType) => {
                 <View style = {[styles.circleContainer, {backgroundColor: circleBackgroundColor}]}>
                     <Image
                     style = {styles.imageLogo}
-                    source = {require('../../assets/icons/user.png')}
+                    source = {require('../../assets/user.png')}
                     />
                 </View>
             </View>

@@ -1,13 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import ForgotPassword from '../screens/forgotPassword';
 import Login from '../screens/login';
 import ResetPassword from '../screens/resetpassword';
 import Splash from '../screens/splash';
-import HomeStackNavigationscreen from './AppNavigation';
 
 
 const StackNav = createNativeStackNavigator();
